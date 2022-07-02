@@ -18,7 +18,11 @@ const Home: NextPage = () => {
 		<div className={styles.container}>
 			<>
 				{postList.map((post: any, post_id: number) => {
-					return <p key={post_id}>{post.post}</p>;
+					return (
+						<div className="outline">
+							<p key={post_id}>{post.post}</p>
+						</div>
+					);
 				})}
 			</>
 		</div>
