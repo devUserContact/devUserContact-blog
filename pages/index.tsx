@@ -14,7 +14,7 @@ const Home: NextPage = () => {
 		setPostList(data);
 	};
 	useEffect(() => {
-		if ((ENVIRONMENT = "dev")) {
+		if ((ENVIRONMENT = "development")) {
 			apiURL = "http://localhost:3001/api/posts";
 		} else {
 			apiURL =
