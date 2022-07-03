@@ -14,7 +14,6 @@ const Home: NextPage = () => {
     } else {
       apiURL = "https://node-backend-server-ny288.ondigitalocean.app/api/posts";
     }
-    console.log(apiURL);
     const res = await fetch(apiURL);
     const data = await res.json();
     setPostList(data);
