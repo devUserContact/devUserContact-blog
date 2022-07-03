@@ -3,9 +3,8 @@ import { useState, useEffect } from "react";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
-	let ENVIRONMENT: string = process.env.NODE_ENV;
+	let ENVIRONMENT = process.env.NODE_ENV;
 	let apiURL: string = "";
-
 	const [postList, setPostList] = useState([]);
 
 	const getPosts = async () => {
@@ -14,13 +13,12 @@ const Home: NextPage = () => {
 		setPostList(data);
 	};
 	useEffect(() => {
-		if ((ENVIRONMENT = "development")) {
+		if (ENVIRONMENT === "development") {
 			apiURL = "http://localhost:3001/api/posts";
 		} else {
 			apiURL =
 				"https://node-backend-server-ny288.ondigitalocean.app/api/posts";
 		}
-		console.log(ENVIRONMENT)
 		getPosts();
 	}, []);
 	return (
