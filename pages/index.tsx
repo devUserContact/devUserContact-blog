@@ -8,17 +8,20 @@ const Home: NextPage = () => {
 
   const [postList, setPostList] = useState([]);
 
+
   const getPosts = async () => {
-    if (ENVIRONMENT = "dev") {
-      apiURL = "http://localhost:3001/api/posts";
-    } else {
-      apiURL = "https://node-backend-server-ny288.ondigitalocean.app/api/posts";
-    }
     const res = await fetch(apiURL);
     const data = await res.json();
     setPostList(data);
   };
   useEffect(() => {
+    if (ENVIRONMENT = "dev") {
+      apiURL = "http://localhost:3001/api/posts";
+    console.log(apiURL)
+    } else {
+      apiURL = "https://node-backend-server-ny288.ondigitalocean.app/api/posts";
+    console.log(apiURL)
+    }
     getPosts();
   }, []);
   return (
