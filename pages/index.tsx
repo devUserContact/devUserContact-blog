@@ -14,12 +14,13 @@ const Home: NextPage = () => {
 		setPostList(data);
 	};
 	useEffect(() => {
-		if (ENVIRONMENT = "dev") {
+		if ((ENVIRONMENT = "dev")) {
 			apiURL = "http://localhost:3001/api/posts";
 		} else {
 			apiURL =
 				"https://node-backend-server-ny288.ondigitalocean.app/api/posts";
 		}
+		console.log(ENVIRONMENT)
 		getPosts();
 	}, []);
 	return (
