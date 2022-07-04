@@ -27,7 +27,9 @@ const Home: NextPage = () => {
 				{postList.map((post: any, post_id: number) => {
 					return (
 						<div className={styles.postWrapper} key={post_id}>
-							<p key={post_id}>{post.post}</p>
+							<p className={styles.postBody} key={post_id}>
+								{post.post}
+							</p>
 						</div>
 					);
 				})}
