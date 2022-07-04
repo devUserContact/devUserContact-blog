@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { useState, useEffect } from "react";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Main.module.scss";
 
 const Home: NextPage = () => {
 	let ENVIRONMENT = process.env.NODE_ENV;
@@ -22,17 +22,17 @@ const Home: NextPage = () => {
 		getPosts();
 	}, []);
 	return (
-		<div className={styles.container}>
-			<>
+		<>
+			<div className={styles.postContainer}>
 				{postList.map((post: any, post_id: number) => {
 					return (
-						<div className="outline" key={post_id}>
+						<div className={styles.postWrapper} key={post_id}>
 							<p key={post_id}>{post.post}</p>
 						</div>
 					);
 				})}
-			</>
-		</div>
+			</div>
+		</>
 	);
 };
 
