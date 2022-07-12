@@ -3,6 +3,21 @@ $screen-md-min: 768px;
 $screen-lg-min: 992px;
 $screen-xl-min: 1200px;
 
+.postContainer {
+	display: grid;
+	grid-template-columns: 1fr;
+	margin: auto;
+	width: 60%;
+}
+.postWrapper {
+	border: solid black 1px;
+	margin: 1%;
+	border-radius: 10px;
+}
+.postBody {
+	text-align: center;
+}
+
 @mixin sm {
 	@media (min-width: #{$screen-sm-min}) {
 		@content;
@@ -31,18 +46,18 @@ $screen-xl-min: 1200px;
 @include lg {
 }
 @include xl {
-	.postContainer {
-		display: grid;
-		grid-template-columns: 1fr;
-		margin: auto;
-		width: 60%;
-	}
-	.postWrapper {
-		border: solid black 1px;
-		margin: 1%;
-		border-radius: 10px;
-	}
-	.postBody {
-		text-align: center;
-	}
+//	.postContainer {
+//		display: grid;
+//		grid-template-columns: 1fr;
+//		margin: auto;
+//		width: 60%;
+//	}
+//	.postWrapper {
+//		border: solid black 1px;
+//		margin: 1%;
+//		border-radius: 10px;
+//	}
+//	.postBody {
+//		text-align: center;
+//	}
 }
