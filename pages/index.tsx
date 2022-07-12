@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import { useState, useEffect } from "react";
 import styles from "../styles/Main.module.scss";
+import BlogTitle from "./BlogTitle"
 
 const Home: NextPage = () => {
 	let ENVIRONMENT = process.env.NODE_ENV;
@@ -23,6 +24,7 @@ const Home: NextPage = () => {
 	}, []);
 	return (
 		<>
+			< BlogTitle />
 			<div className={styles.postContainer}>
 				{postList.map((post: any, post_id: number) => {
 					return (
