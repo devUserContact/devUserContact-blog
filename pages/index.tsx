@@ -26,7 +26,7 @@ const Home: NextPage = () => {
 		<>
 			<BlogTitle />
 			<div className={styles.postContainer}>
-				{postList.map((post: any, post_id: number) => {
+				{postList.reverse().map((post: any, post_id: number) => {
 					return (
 						<div className={styles.postWrapper} key={post_id}>
 							<p className={styles.postBody} key={post_id}>
