@@ -2,13 +2,25 @@ $screen-sm-min: 576px;
 $screen-md-min: 768px;
 $screen-lg-min: 992px;
 $screen-xl-min: 1200px;
+
+.blogTitleContainer{
+	display: grid;
+	width: 60%;	
+	margin: auto;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
 .blogTitle {
 	font-size: 3rem;
-	text-align: center;
+	margin: 1%;
+	margin-top: 2%;
+	margin-bottom: -1%;
+	text-align: left;
 }
 .blogSubTitle {
 	font-size: 1.75rem;
-	text-align: center;
+	margin: 1%;
+	text-align: left;
 }
 .postContainer {
 	display: grid;
