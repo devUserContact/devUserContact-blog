@@ -24,7 +24,7 @@ const Home: NextPage = () => {
 	}, []);
 	return (
 		<>
-			< BlogTitle />
+			<BlogTitle />
 			<div className={styles.postContainer}>
 				{postList.map((post: any, post_id: number) => {
 					return (
