@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import { useState, useEffect } from "react";
 import styles from "../styles/Main.module.scss";
-import BlogTitle from "./BlogTitle"
+import BlogTitle from "./BlogTitle";
 
 const Home: NextPage = () => {
 	let ENVIRONMENT = process.env.NODE_ENV;
