@@ -11,7 +11,7 @@ const Posts: NextPage = () => {
 	} else {
 		apiURL = "https://node-backend-server-ny288.ondigitalocean.app/api/posts";
 	}
-	const [postList, setPostList] = useState({});
+	const [postList, setPostList] = useState([]);
 	const [postsFetched, setPostsFetched] = useState(false);
 	const [dateFormatted, setDateFormatted] = useState(false);
 	//	const [postsFormatted, setPostsFormatted] = useState(false);
