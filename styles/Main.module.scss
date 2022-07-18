@@ -33,8 +33,12 @@ $screen-xl-min: 1200px;
 	margin: 1%;
 	border-radius: 10px;
 }
+.postDate {
+	text-align: center;
+}
 .postBody {
 	text-align: center;
+	font-size: 25px;
 }
 
 @mixin sm {
