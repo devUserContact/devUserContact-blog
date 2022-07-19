@@ -64,5 +64,4 @@ const Posts: NextPage = () => {
 		);
 	}
 };
-
 export default Posts;
