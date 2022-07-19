@@ -36,9 +36,14 @@ $screen-xl-min: 1200px;
 .postHeaderGrid {
 	display: grid;
 	grid-template-columns: 3fr 1fr;
+	border-radius: 10px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	background-color: lightgreen;
 }
 .postTitle {
 	display: grid;
+	align-items: center;
 	text-align: left;
 	margin-top: 2%;
 	margin-left: 4%;
@@ -46,6 +51,7 @@ $screen-xl-min: 1200px;
 }
 .postDate {
 	display: grid;
+	align-items: center;
 	text-align: right;
 	margin-top: 6%;
 	margin-right: 12%;
