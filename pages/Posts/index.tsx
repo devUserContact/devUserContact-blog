@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import React from "react";
 import { useState, useEffect } from "react";
-import { markdown } from "markdown";
+import Markdown from "react-markdown";
 import styles from "../../styles/Main.module.scss";
 import Loading from "../Loading";
 
@@ -47,8 +47,8 @@ const Posts: NextPage = () => {
 								<p className={styles.postTitle}>{post.title}</p>
 								<p className={styles.postDate}>{post.dateFormatted}</p>
 							</div>	
-								<p className={styles.postBody} key={post_id}>
-									markdown.toHTML({post.body})
+								<p className={styles.postBody}>
+									<Markdown children={post.body} />
 								</p>
 							</div>
 						);
