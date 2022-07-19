@@ -33,12 +33,28 @@ $screen-xl-min: 1200px;
 	margin: 1%;
 	border-radius: 10px;
 }
+.postHeaderGrid {
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+}
+.postTitle {
+	display: grid;
+	text-align: left;
+	margin-top: 2%;
+	margin-left: 4%;
+	font-size: 25px
+}
 .postDate {
-	text-align: center;
+	display: grid;
+	text-align: right;
+	margin-top: 6%;
+	margin-right: 12%;
+	font-size: 20px
 }
 .postBody {
 	text-align: center;
-	font-size: 25px;
+	width: 80%;
+	font-size: 20px;
 }
 
 @mixin sm {

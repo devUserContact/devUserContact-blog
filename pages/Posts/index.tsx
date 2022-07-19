@@ -1,15 +1,18 @@
 import type { NextPage } from "next";
 import React from "react";
 import { useState, useEffect } from "react";
+import { markdown } from "markdown";
 import styles from "../../styles/Main.module.scss";
+import Loading from "../Loading";
 
 const Posts: NextPage = () => {
 	let ENVIRONMENT = process.env.NODE_ENV;
 	let apiURL: string = "";
 	if (ENVIRONMENT === "development") {
-		apiURL = "http://localhost:3001/api/posts";
+		apiURL = "http://localhost:3001/api/blog-devusercontact/posts";
 	} else {
-		apiURL = "https://node-backend-server-ny288.ondigitalocean.app/api/posts";
+		apiURL =
+			"https://node-backend-server-ny288.ondigitalocean.app/api/blog-devusercontact/posts";
 	}
 	const [postList, setPostList] = useState([]);
 	const [postsFetched, setPostsFetched] = useState(false);
@@ -17,20 +20,20 @@ const Posts: NextPage = () => {
 	//	const [postsFormatted, setPostsFormatted] = useState(false);
 	useEffect(() => {
 		const getPosts = async () => {
-		const res = await fetch(apiURL);
-		const data = await res.json();
-		setPostList(data);
-		setPostsFetched(true);
-		if (postsFetched) {
-			const postListWithDateFormatted: any = postList.map((post: any) => {
-				const dateFormatted = post.created_at.substring(0, 10);
-				return { ...post, dateFormatted };
-			});
-			setPostList(postListWithDateFormatted);
-		}
-		setDateFormatted(true);
-		return;
-	};
+			const res = await fetch(apiURL);
+			const data = await res.json();
+			setPostList(data);
+			setPostsFetched(true);
+			if (postsFetched) {
+				const postListWithDateFormatted: any = postList.map((post: any) => {
+					const dateFormatted = post.submission_date.substring(0, 10);
+					return { ...post, dateFormatted };
+				});
+				setPostList(postListWithDateFormatted);
+			}
+			setDateFormatted(true);
+			return;
+		};
 		getPosts();
 	}, [dateFormatted]);
 	if (dateFormatted) {
@@ -40,9 +43,12 @@ const Posts: NextPage = () => {
 					{postList.reverse().map((post: any, post_id: number) => {
 						return (
 							<div className={styles.postWrapper} key={post_id}>
+							<div className={styles.postHeaderGrid} key={post_id}>
+								<p className={styles.postTitle}>{post.title}</p>
 								<p className={styles.postDate}>{post.dateFormatted}</p>
+							</div>	
 								<p className={styles.postBody} key={post_id}>
-									{post.post}
+									markdown.toHTML({post.body})
 								</p>
 							</div>
 						);
@@ -51,7 +57,11 @@ const Posts: NextPage = () => {
 			</>
 		);
 	} else {
-		return <>test</>;
+		return (
+			<>
+				<Loading />
+			</>
+		);
 	}
 };
 
