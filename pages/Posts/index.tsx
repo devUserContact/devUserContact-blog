@@ -43,12 +43,12 @@ const Posts: NextPage = () => {
 					{postList.reverse().map((post: any, post_id: number) => {
 						return (
 							<div className={styles.postWrapper} key={post_id}>
-							<div className={styles.postHeaderGrid} key={post_id}>
-								<p className={styles.postTitle}>{post.title}</p>
-								<p className={styles.postDate}>{post.dateFormatted}</p>
-							</div>	
+								<div className={styles.postHeaderGrid} key={post_id}>
+									<p className={styles.postTitle}>{post.title}</p>
+									<p className={styles.postDate}>{post.dateFormatted}</p>
+								</div>
 								<p className={styles.postBody}>
-									<Markdown children={post.body} />
+									<Markdown>{post.body}</Markdown>
 								</p>
 							</div>
 						);
