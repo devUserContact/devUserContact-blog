@@ -46,6 +46,7 @@ const Posts: NextPage = () => {
 								<div className={styles.postHeaderGrid} key={post_id}>
 									<p className={styles.postTitle}>{post.title}</p>
 									<p className={styles.postDate}>{post.dateFormatted}</p>
+									<p className={styles.postTitle}>{post.sub_title}</p>
 								</div>
 								<p className={styles.postBody}>
 									<Markdown>{post.body}</Markdown>
