@@ -2,7 +2,6 @@ import type { NextPage } from "next";
 import React from "react";
 import { useState, useEffect } from "react";
 import Markdown from "react-markdown";
-import codeBlocks from "remark-code-blocks";
 import styles from "../../styles/Main.module.scss";
 import Loading from "../Loading";
 
@@ -50,7 +49,7 @@ const Posts: NextPage = () => {
 									<p className={styles.postSubtitle}>{post.sub_title}</p>
 								</div>
 								<div className={styles.postBody}>
-									<Markdown remarkPlugins={[codeBlocks]}>{post.body}</Markdown>
+									<Markdown>{post.body}</Markdown>
 								</div>
 							</div>
 						);
