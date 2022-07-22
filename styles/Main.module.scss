@@ -47,7 +47,12 @@ $screen-xl-min: 1200px;
 	text-align: left;
 	margin-top: 2%;
 	margin-left: 4%;
-	font-size: 25px
+	font-size: 25px;
+	font-weight: bold;
+}
+.postSubtitle {
+	@extend .postTitle;
+	font-weight: normal;
 }
 .postDate {
 	display: grid;
@@ -58,8 +63,8 @@ $screen-xl-min: 1200px;
 	font-size: 20px
 }
 .postBody {
-	margin-left: 4%;
-	white-space: pre-wrap;
+	margin: auto;
+	white-space: wrap;
 	text-align: left;
 	width: 80%;
 	font-size: 20px;

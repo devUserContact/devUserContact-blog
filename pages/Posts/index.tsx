@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import React from "react";
 import { useState, useEffect } from "react";
 import Markdown from "react-markdown";
+import codeBlocks from "remark-code-blocks";
 import styles from "../../styles/Main.module.scss";
 import Loading from "../Loading";
 
@@ -14,7 +15,7 @@ const Posts: NextPage = () => {
 		apiURL =
 			"https://node-backend-server-ny288.ondigitalocean.app/api/blog-devusercontact/posts";
 	}
-	const [postList, setPostList] = useState([]);
+	const [posts, setPosts] = useState([]);
 	const [postsFetched, setPostsFetched] = useState(false);
 	const [dateFormatted, setDateFormatted] = useState(false);
 	//	const [postsFormatted, setPostsFormatted] = useState(false);
@@ -22,14 +23,14 @@ const Posts: NextPage = () => {
 		const getPosts = async () => {
 			const res = await fetch(apiURL);
 			const data = await res.json();
-			setPostList(data);
+			setPosts(data);
 			setPostsFetched(true);
 			if (postsFetched) {
-				const postListWithDateFormatted: any = postList.map((post: any) => {
+				const postListWithDateFormatted: any = posts.map((post: any) => {
 					const dateFormatted = post.submission_date.substring(0, 10);
 					return { ...post, dateFormatted };
 				});
-				setPostList(postListWithDateFormatted);
+				setPosts(postListWithDateFormatted);
 			}
 			setDateFormatted(true);
 			return;
@@ -40,17 +41,17 @@ const Posts: NextPage = () => {
 		return (
 			<>
 				<div className={styles.postContainer}>
-					{postList.reverse().map((post: any, post_id: number) => {
+					{posts.map((post: any, post_id: number) => {
 						return (
 							<div className={styles.postWrapper} key={post_id}>
 								<div className={styles.postHeaderGrid} key={post_id}>
 									<p className={styles.postTitle}>{post.title}</p>
 									<p className={styles.postDate}>{post.dateFormatted}</p>
-									<p className={styles.postTitle}>{post.sub_title}</p>
+									<p className={styles.postSubtitle}>{post.sub_title}</p>
 								</div>
-								<p className={styles.postBody}>
-									<Markdown>{post.body}</Markdown>
-								</p>
+								<div className={styles.postBody}>
+									<Markdown remarkPlugins={[codeBlocks]}>{post.body}</Markdown>
+								</div>
 							</div>
 						);
 					})}

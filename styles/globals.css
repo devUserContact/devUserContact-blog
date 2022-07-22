@@ -1,3 +1,7 @@
+@font-face {
+	font-family: monospace;
+	src: url(../fonts/monospace.medium.ttf); 
+}
 html,
 body {
   padding: 0;
@@ -13,4 +17,8 @@ a {
 
 * {
   box-sizing: border-box;
+}
+code {
+	font-family: monospace;
+	font-size: 10px;
 }
