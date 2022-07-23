@@ -1,6 +1,6 @@
 @font-face {
 	font-family: monospace;
-	src: url(../fonts/monospace.medium.ttf); 
+	src: url(../fonts/LabMono-Regular.otf) format("otf");
 }
 html,
 body {
@@ -19,6 +19,6 @@ a {
   box-sizing: border-box;
 }
 code {
+	background-color: #d8d8d8;
 	font-family: monospace;
-	font-size: 10px;
 }
