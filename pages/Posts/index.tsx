@@ -29,9 +29,9 @@ const Posts: NextPage = () => {
 					const dateFormatted = post.submission_date.substring(0, 10);
 					return { ...post, dateFormatted };
 				});
-				setPosts(postListWithDateFormatted);
+				setPosts(postListWithDateFormatted.reverse());
 			}
-			setDateFormatted(true);
+			setDateFormatted(true)
 			return;
 		};
 		getPosts();

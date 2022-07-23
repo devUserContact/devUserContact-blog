@@ -26,11 +26,13 @@ $screen-xl-min: 1200px;
 	display: grid;
 	grid-template-columns: 1fr;
 	margin: auto;
+	margin-bottom: 3%;
 	width: 60%;
 }
 .postWrapper {
 	border: solid black 1px;
 	margin: 1%;
+	margin-bottom: 2%;
 	border-radius: 10px;
 }
 .postHeaderGrid {
@@ -43,16 +45,20 @@ $screen-xl-min: 1200px;
 }
 .postTitle {
 	display: grid;
-	align-items: center;
 	text-align: left;
+	position: relative;
 	margin-top: 2%;
+	margin-bottom: 2%;
 	margin-left: 4%;
-	font-size: 25px;
+	font-size: 30px;
 	font-weight: bold;
 }
 .postSubtitle {
 	@extend .postTitle;
 	font-weight: normal;
+	font-size: 26px;
+	margin-top: 0%;
+	margin-left: 4%;
 }
 .postDate {
 	display: grid;
