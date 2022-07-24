@@ -2,80 +2,6 @@ $screen-sm-min: 576px;
 $screen-md-min: 768px;
 $screen-lg-min: 992px;
 $screen-xl-min: 1200px;
-
-.blogTitleContainer{
-	display: grid;
-	width: 60%;	
-	margin: auto;
-	margin-top: 1%;
-	margin-bottom: 1%;
-}
-.blogTitle {
-	font-size: 3rem;
-	margin: 1%;
-	margin-top: 2%;
-	margin-bottom: -1%;
-	text-align: left;
-}
-.blogSubTitle {
-	font-size: 1.75rem;
-	margin: 1%;
-	text-align: left;
-}
-.postContainer {
-	display: grid;
-	grid-template-columns: 1fr;
-	margin: auto;
-	margin-bottom: 3%;
-	width: 60%;
-}
-.postWrapper {
-	border: solid black 1px;
-	margin: 1%;
-	margin-bottom: 2%;
-	border-radius: 10px;
-}
-.postHeaderGrid {
-	display: grid;
-	grid-template-columns: 3fr 1fr;
-	border-radius: 10px;
-	border-bottom-left-radius: 0;
-	border-bottom-right-radius: 0;
-	background-color: rgb(157, 191, 191);
-}
-.postTitle {
-	display: grid;
-	text-align: left;
-	position: relative;
-	margin-top: 2%;
-	margin-bottom: 1%;
-	margin-left: 4%;
-	font-size: 30px;
-	font-weight: bold;
-}
-.postSubtitle {
-	@extend .postTitle;
-	margin-top: 0%;
-	margin-bottom: 2%;
-	margin-left: 4%;
-	font-size: 26px;
-	font-weight: normal;
-}
-.postDate {
-	display: grid;
-	position: relative;
-	text-align: right;
-	margin-right: 14%;
-	font-size: 20px
-}
-.postBody {
-	margin: auto;
-	white-space: wrap;
-	text-align: left;
-	width: 80%;
-	font-size: 22px;
-}
-
 @mixin sm {
 	@media (min-width: #{$screen-sm-min}) {
 		@content;
@@ -97,25 +23,167 @@ $screen-xl-min: 1200px;
 	}
 }
 
+.blogTitleContainer {
+	display: grid;
+	width: 90%;
+	margin: auto;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+.blogTitle {
+	margin: 1%;
+	margin-top: 2%;
+	margin-bottom: 0.5%;
+	text-align: left;
+	font-size: 2.5rem;
+}
+.blogSubTitle {
+	margin: 1%;
+	text-align: left;
+	font-size: 1.5rem;
+}
+.postContainer {
+	display: grid;
+	width: 90%;
+	grid-template-columns: 1fr;
+	margin: auto;
+	margin-bottom: 3%;
+}
+.postWrapper {
+	border: solid black 1px;
+	margin: 1%;
+	margin-bottom: 4%;
+	border-radius: 1.5rem;
+}
+.postHeaderGrid {
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	border-radius: 1.5rem;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	background-color: rgb(157, 191, 191);
+}
+.postTitle {
+	display: grid;
+	position: relative;
+	margin-top: 4%;
+	margin-bottom: 1%;
+	margin-left: 4%;
+	text-align: left;
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+.postSubtitle {
+	display: grid;
+	position: relative;
+	margin-top: 0%;
+	margin-bottom: 4%;
+	margin-left: 4%;
+	text-align: left;
+	font-size: 1.2rem;
+}
+.postDate {
+	display: grid;
+	position: relative;
+	text-align: right;
+	margin-right: 18%;
+	font-size: 1rem;
+}
+.postBody {
+	margin: auto;
+	white-space: wrap;
+	text-align: left;
+	width: 90%;
+	font-size: 0.95rem;
+}
+
 @include sm {
+	.blogTitle {
+		font-size: 3.5rem;
+	}
+	.blogSubTitle {
+		font-size: 2.4rem;
+	}
+	.postTitle {
+		font-size: 2.4rem;
+	}
+	.postSubtitle {
+		font-size: 2rem;
+	}
+	.postDate {
+		font-size: 1.7rem;
+	}
+	.postBody {
+		font-size: 1.5rem;
+	}
 }
+
 @include md {
+	.blogTitleContainer {
+		margin-top: 2%;
+		margin-bottom: 2%;
+	}
+	.blogTitle {
+		font-size: 4rem;
+	}
+	.blogSubTitle {
+		font-size: 3rem;
+	}
+	.postTitle {
+		margin-top: 3%;
+		font-size: 2.8rem;
+	}
+	.postSubtitle {
+		font-size: 2.4rem;
+	}
+	.postDate {
+		font-size: 2rem;
+	}
+	.postBody {
+		font-size: 2rem;
+	}
 }
+
 @include lg {
+	.postTitle {
+		margin-top: 3%;
+		font-size: 3rem;
+	}
+	.postSubtitle {
+		font-size: 2.5rem;
+	}
+	.postDate {
+		font-size: 2.2rem;
+	}
+	.postBody {
+		font-size: 2.4rem;
+	}
 }
 @include xl {
-//	.postContainer {
-//		display: grid;
-//		grid-template-columns: 1fr;
-//		margin: auto;
-//		width: 60%;
-//	}
-//	.postWrapper {
-//		border: solid black 1px;
-//		margin: 1%;
-//		border-radius: 10px;
-//	}
-//	.postBody {
-//		text-align: center;
-//	}
+	.blogTitleContainer {
+		width: 85%;
+	}
+	.blogTitle {
+		font-size: 5rem;
+	}
+	.blogSubTitle {
+		font-size: 4rem;
+	}
+	.postContainer {
+		width: 85%;
+	}
+	.postTitle {
+		margin-top: 3%;
+		font-size: 3.5rem;
+	}
+	.postSubtitle {
+		font-size: 3rem;
+	}
+	.postDate {
+		margin-top:10%;
+	}
+	.postBody {
+		width: 85%;
+		font-size: 2.4rem;
+	}
 }
