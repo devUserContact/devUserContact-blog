@@ -49,7 +49,7 @@ const Posts: NextPage = () => {
 									<p className={styles.postSubtitle}>{post.sub_title}</p>
 								</div>
 								<div className={styles.postBody}>
-									<Markdown>{post.body}</Markdown>
+									<Markdown linkTarget={"_blank"}>{post.body}</Markdown>
 								</div>
 							</div>
 						);
