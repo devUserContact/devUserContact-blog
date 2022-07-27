@@ -1,5 +1,13 @@
+import type { NextPage } from "next";
+import NavBar from "../../components/NavBar";
 import styles from "../../styles/Main.module.scss";
 
-export default function About() {
-	return <>about</>
-}
+const About: NextPage = () => {
+	return (
+		<>
+			<NavBar />
+			<p>about</p>
+		</>
+	);
+};
+export default About;

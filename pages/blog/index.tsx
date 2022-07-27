@@ -1,11 +1,11 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import NavBar from "../../components/NavBar";
+import BlogTitle from "../../components/BlogTitle";
+import Posts from "../../components/Posts";
 import styles from "../../styles/Main.module.scss";
-import NavBar from "../NavBar";
-import BlogTitle from "../BlogTitle";
-import Posts from "../Posts";
 
-const Home: NextPage = () => {
+const Blog: NextPage = () => {
 	return (
 		<div className={styles.mainWrapper}>
 			<Head>
@@ -22,4 +22,4 @@ const Home: NextPage = () => {
 	);
 };
 
-export default Home;
+export default Blog;

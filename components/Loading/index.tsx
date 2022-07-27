@@ -1,6 +1,6 @@
-import type { NextPage } from "next";
 import styles from "../../styles/Main.module.scss";
-export default function BlogTitle() {
+
+export default function Loading() {
 	return (
 		<>
 			<div className={styles.blogTitleContainer}>

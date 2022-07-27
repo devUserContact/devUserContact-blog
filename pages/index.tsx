@@ -1,9 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import NavBar from "../components/NavBar";
+import BlogTitle from "../components/BlogTitle";
 import styles from "../styles/Main.module.scss";
-import NavBar from "./NavBar";
-import BlogTitle from "./BlogTitle";
-import Posts from "./Posts";
 
 const Home: NextPage = () => {
 	return (

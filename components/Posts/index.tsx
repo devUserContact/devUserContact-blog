@@ -2,10 +2,10 @@ import type { NextPage } from "next";
 import React from "react";
 import { useState, useEffect } from "react";
 import Markdown from "react-markdown";
-import styles from "../../styles/Main.module.scss";
 import Loading from "../Loading";
+import styles from "../../styles/Main.module.scss";
 
-const Posts: NextPage = () => {
+export default function Posts() {
 	let ENVIRONMENT = process.env.NODE_ENV;
 	let apiURL: string = "";
 	if (ENVIRONMENT === "development") {
@@ -65,4 +65,3 @@ const Posts: NextPage = () => {
 		);
 	}
 };
-export default Posts;
