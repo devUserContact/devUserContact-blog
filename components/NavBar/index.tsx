@@ -9,9 +9,13 @@ export default function NavBar() {
 					<Link href="/">
 						<a>/home </a>
 					</Link>
+				</p>
+				<p className={styles.navBarText}>
 					<Link href="/blog">
 						<a>/blog </a>
 					</Link>
+				</p>
+				<p className={styles.navBarText}>
 					<Link href="/about">
 						<a>/about </a>
 					</Link>
