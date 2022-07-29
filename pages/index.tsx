@@ -14,7 +14,9 @@ const Home: NextPage = () => {
 			</Head>
 			<main>
 				<NavBar />
-				<BlogTitle />
+				<div className={styles.homeContainer}>
+					<BlogTitle />
+				</div>
 			</main>
 		</div>
 	);
