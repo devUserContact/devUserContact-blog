@@ -3,8 +3,9 @@ import Markdown from "react-markdown";
 import NavBar from "../../components/NavBar";
 import styles from "../../styles/Main.module.scss";
 
-const resume = `### My name is Maxwell, 
-### I am a software developer with an passion for full-stack web development
+const resume = `### _Hello_, 
+### My name is Maxwell & I am a software developer with a passion for full-stack web development
+### 
 ___
 projects: 
 - [Tabs to Markdown][1] - Extension for 🦊 Firefox
