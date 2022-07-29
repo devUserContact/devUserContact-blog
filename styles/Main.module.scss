@@ -26,12 +26,11 @@ $screen-xl-min: 1200px;
 	margin-top: 4%;
 }
 .homeContainer {
-	display: flex;
-	position: absolute;
-	height: 70%;
+	display: inline-grid;
+	margin-top: 10%;
+	height: 100%;
 	width: 100%;
-	margin-left: 13%;
-	align-items: center;
+	justify-content: center;
 }
 .navBarContainer {
 	display: flex;
