@@ -4,7 +4,7 @@ export default function Loading() {
 	return (
 		<>
 			<div className={styles.blogTitleContainer}>
-				<p className={styles.postBody}>
+				<p className={styles.loadingText}>
 					Loading. . .
 				</p>
 			</div>
