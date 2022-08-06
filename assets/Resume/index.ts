@@ -1,4 +1,4 @@
-export const Resume: text = `### _Hello_, 
+export const Resume: any = `### _Hello_, 
 ### My name is Maxwell & I am a software developer with a passion for full-stack web development
 ### 
 ___
