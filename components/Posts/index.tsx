@@ -1,8 +1,8 @@
-import type { NextPage } from "next";
 import React from "react";
 import { useState, useEffect } from "react";
 import Markdown from "react-markdown";
 import Loading from "../Loading";
+import Post from "../Post";
 import styles from "../../styles/Main.module.scss";
 
 export default function Posts() {
@@ -31,7 +31,7 @@ export default function Posts() {
 				});
 				setPosts(postListWithDateFormatted.reverse());
 			}
-			setDateFormatted(true)
+			setDateFormatted(true);
 			return;
 		};
 		getPosts();
@@ -41,18 +41,7 @@ export default function Posts() {
 			<>
 				<div className={styles.postContainer}>
 					{posts.map((post: any, post_id: number) => {
-						return (
-							<div className={styles.postWrapper} key={post_id}>
-								<div className={styles.postHeaderGrid} key={post_id}>
-									<p className={styles.postTitle}>{post.title}</p>
-									<p className={styles.postDate}>{post.dateFormatted}</p>
-									<p className={styles.postSubtitle}>{post.sub_title}</p>
-								</div>
-								<div className={styles.postBody}>
-									<Markdown linkTarget={"_blank"}>{post.body}</Markdown>
-								</div>
-							</div>
-						);
+						return <Post key={post_id} post={post} />;
 					})}
 				</div>
 			</>
@@ -64,4 +53,4 @@ export default function Posts() {
 			</>
 		);
 	}
-};
+}
