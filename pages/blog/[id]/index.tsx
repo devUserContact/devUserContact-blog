@@ -5,6 +5,8 @@ import styles from "../../../styles/Main.module.scss";
 export default function postPage() {
 	const router = useRouter();
 	return (
+		<>
+		<div className={styles.spacerDynamicPost}></div>
 		<div className={styles.postContainer}>
 			<div className={styles.postWrapper}>
 				<div className={styles.postHeaderGrid}>
@@ -17,5 +19,6 @@ export default function postPage() {
 				</div>
 			</div>
 		</div>
+		</>	
 	);
 }

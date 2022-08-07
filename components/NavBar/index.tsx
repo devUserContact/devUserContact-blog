@@ -20,11 +20,6 @@ export default function NavBar() {
 						<a>/about </a>
 					</Link>
 				</p>
-				<p className={styles.navBarText}>
-					<Link href="/test">
-						<a>/test* </a>
-					</Link>
-				</p>
 			</div>
 		</>
 	);

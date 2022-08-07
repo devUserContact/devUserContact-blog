@@ -25,6 +25,10 @@ $screen-xl-min: 1200px;
 .spacer {
 	margin-top: 4%;
 }
+.spacerDynamicPost {
+	margin-top: 10%;
+}
+
 .homeContainer {
 	display: inline-grid;
 	margin-top: 10%;
@@ -43,6 +47,9 @@ $screen-xl-min: 1200px;
 	margin-left: 2%;
 	text-align: left;
 	font-size: 2.2rem;
+	a { 
+  	color: rgb(0, 125, 220);
+	}
 }
 .blogTitleContainer {
 	display: grid;
@@ -117,6 +124,9 @@ $screen-xl-min: 1200px;
 	text-align: left;
 	width: 90%;
 	font-size: 0.95rem;
+	a { 
+  	color: rgb(0, 125, 220);
+	}
 }
 .loadingText {
 	margin-top: 10%;
