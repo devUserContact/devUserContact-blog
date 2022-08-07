@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import Markdown from "react-markdown";
 import styles from "../../../styles/Main.module.scss";
 
-export default function postPage() {
+export default function PostPage() {
 	const router = useRouter();
 	return (
 		<>
