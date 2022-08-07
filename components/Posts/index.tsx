@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import Markdown from "react-markdown";
+import { useRouter } from "next/router";
 import Loading from "../Loading";
 import Post from "../Post";
 import styles from "../../styles/Main.module.scss";
@@ -17,6 +17,7 @@ export default function Posts() {
 	const [posts, setPosts] = useState([]);
 	const [postsFetched, setPostsFetched] = useState(false);
 	const [dateFormatted, setDateFormatted] = useState(false);
+	const router = useRouter();
 	//	const [postsFormatted, setPostsFormatted] = useState(false);
 	useEffect(() => {
 		const getPosts = async () => {
@@ -41,7 +42,11 @@ export default function Posts() {
 			<>
 				<div className={styles.postContainer}>
 					{posts.map((post: any, post_id: number) => {
-						return <Post key={post_id} post={post} />;
+						return (
+							<>
+								<Post key={post_id} post={post} />
+							</>
+						);
 					})}
 				</div>
 			</>
