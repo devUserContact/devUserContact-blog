@@ -13,10 +13,6 @@ const Post = ({ post }: any) => {
 						pathname: ROUTE_POST_ID,
 						query: {
 							id: post.id,
-							title: post.title,
-							dateFormatted: post.dateFormatted,
-							subTitle: post.sub_title,
-							body: post.body,
 						},
 					}}
 					as={`blog/${post.id}`} 

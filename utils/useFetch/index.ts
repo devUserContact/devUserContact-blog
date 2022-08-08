@@ -13,7 +13,7 @@ export default function useFetch() {
 	const [postsFetched, setPostsFetched] = useState(false);
 	const [dateFormatted, setDateFormatted] = useState(false);
 	useEffect(() => {
-			const getPosts = async () => {
+		const getPosts = async () => {
 			const res = await fetch(apiURL);
 			const data = await res.json();
 			setPosts(data);
@@ -29,7 +29,6 @@ export default function useFetch() {
 			return;
 		};
 		getPosts();
-
-	}, [dateFormatted])
-	return {posts, dateFormatted}
+	}, [dateFormatted]);
+	return { posts, dateFormatted };
 }
