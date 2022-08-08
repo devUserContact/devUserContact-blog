@@ -8,16 +8,15 @@ import styles from "../../../styles/Main.module.scss";
 export default function PostPage() {
 	const router = useRouter();
 	const { posts, dateFormatted } = useFetch();
-	console.log(router.query);
+	const routerId = parseInt(router.query.id! as string)
 	if (dateFormatted) {
-		console.log();
 		return (
 			<>
 				<NavBar />
 				<div className={styles.spacer}></div>
 				<div className={styles.postContainer}>
 					{posts.map((post: any, post_id: number) => {
-						if (post.id === parseInt(router.query.id)) {
+						if (post.id === routerId) {
 							return (
 								<>
 									<Post key={post_id} post={post} />
