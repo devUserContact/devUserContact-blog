@@ -1,5 +1,4 @@
 import React from "react";
-import Router from "next/router";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import styles from "../../styles/Main.module.scss";
