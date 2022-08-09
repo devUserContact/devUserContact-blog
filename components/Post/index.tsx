@@ -18,7 +18,7 @@ const Post = ({ post }: any) => {
 					as={`blog/${post.id}`} 
 				>
 					<div className={styles.postHeaderGrid}>
-						<a className={styles.postTitle}>{post.title}</a>
+						<p className={styles.postTitle}>{post.title}</p>
 						<p className={styles.postDate}>{post.dateFormatted}</p>
 						<p className={styles.postSubtitle}>{post.sub_title}</p>
 					</div>
