@@ -1,15 +1,13 @@
 import React from "react";
-import Link from "next/link";
-import PostHeader from "../PostHeader";
+import PostHeaderSansLink from "../PostHeaderSansLink";
 import PostBody from "../PostBody";
 import styles from "../../styles/Main.module.scss";
 
-const Post = ({ post }: any) => {
-	const ROUTE_POST_ID = "blog/[id]";
+const PostSansLink = ({ post }: any) => {
 	return (
 		<div className={styles.postContainer}>
 			<div className={styles.postWrapper}>
-				<PostHeader post={post} />
+				<PostHeaderSansLink post={post} />
 				<div className={styles.postBody}>
 					<PostBody post={post} />
 				</div>
@@ -18,4 +16,4 @@ const Post = ({ post }: any) => {
 	);
 };
 
-export default Post;
+export default PostSansLink;
