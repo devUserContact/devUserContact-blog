@@ -2,7 +2,7 @@ import Link from "next/link";
 import styles from "../../styles/Main.module.scss";
 
 const PostHeader = ({ post }: any) => {
-	const ROUTE_POST_ID = "blog/[id]";
+	const ROUTE_POST_ID = "posts/[id]";
 	return (
 		<Link
 			href={{
@@ -11,7 +11,7 @@ const PostHeader = ({ post }: any) => {
 					id: post.id,
 				},
 			}}
-			as={`blog/${post.id}`}
+			as={`posts/${post.id}`}
 		>
 			<div className={styles.postHeaderGrid}>
 				<a className={styles.postTitle}>{post.title}</a>

@@ -11,7 +11,7 @@ export default function NavBar() {
 					</Link>
 				</p>
 				<p className={styles.navBarText}>
-					<Link href="/blog">
+					<Link href="/posts">
 						<a>/blog </a>
 					</Link>
 				</p>
