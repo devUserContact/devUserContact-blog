@@ -3,4 +3,4 @@
 ___
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 ___
-[1]:https://devusercontact-blog.netlify.app
+[1]:https://devusercontact.com
