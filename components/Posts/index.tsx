@@ -1,12 +1,16 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import useFetch from "../../utils/useFetch";
+
+import gqlFetch from "../../utils/gqlFetch";
+
 import Loading from "../Loading";
 import Post from "../Post";
 import styles from "../../styles/Main.module.scss";
 
 export default function Posts() {
-	const { posts, dateFormatted } = useFetch();
+//	const { posts, dateFormatted } = useFetch();
+	const { posts, dateFormatted } = gqlFetch();
 
 	if (dateFormatted) {
 		return (
