@@ -6,27 +6,25 @@ export default function gqlFetch() {
 	const [posts, setPosts] = useState([]);
 	const [postsFetched, setPostsFetched] = useState(false);
 	const [dateFormatted, setDateFormatted] = useState(false);
-
 	const { data } = useQuery(GetAllBlogPosts, {
-		variables: {
-		},
+		variables: {},
 	});
+
 	useEffect(() => {
 		if (data) {
-			console.log(data)
-			return data
+			setPosts(data.getAllBlogPosts);
+			setPostsFetched(true);
 		}
-//		setPosts(data);
-//		setPostsFetched(true);
-//		if (postsFetched) {
-//			const postListWithDateFormatted: any = posts.map((post: any) => {
-//				const dateFormatted = post.submission_date.substring(0, 10);
-//				return { ...post, dateFormatted };
-//			});
-//			setPosts(postListWithDateFormatted.reverse());
-//		}
-//		setDateFormatted(true);
-//		return;
-	}, [data]);
-	return {data};
+		if (postsFetched) {
+			const postListWithDateFormatted: any = posts.map((post: any) => {
+				console.log(post)
+				const dateFormatted = post.submission_date.substring(0, 10);
+				return { ...post, dateFormatted };
+			});
+			setPosts(postListWithDateFormatted.reverse());
+		}
+		return setDateFormatted(true);
+	}, [data, dateFormatted]);
+	console.table(posts)
+	return { posts };
 }
