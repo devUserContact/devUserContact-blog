@@ -14,17 +14,17 @@ export default function gqlFetch() {
 		if (data) {
 			setPosts(data.getAllBlogPosts);
 			setPostsFetched(true);
+			if (postsFetched) {
+				const postListWithDateFormatted: any = posts.map((post: any, id: number) => {
+					const date_formatted = post.submission_date.substring(0, 10);
+					id += 1;
+					return { ...post, date_formatted, id };
+				});
+				setPosts(postListWithDateFormatted.reverse());
+			}
+			setDateFormatted(true);
 		}
-		if (postsFetched) {
-			const postListWithDateFormatted: any = posts.map((post: any) => {
-				console.log(post)
-				const dateFormatted = post.submission_date.substring(0, 10);
-				return { ...post, dateFormatted };
-			});
-			setPosts(postListWithDateFormatted.reverse());
-		}
-		return setDateFormatted(true);
 	}, [data, dateFormatted]);
-	console.table(posts)
-	return { posts };
+	console.table(posts);
+	return { posts, dateFormatted };
 }

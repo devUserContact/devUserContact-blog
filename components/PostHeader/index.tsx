@@ -15,7 +15,7 @@ const PostHeader = ({ post }: any) => {
 		>
 			<div className={styles.postHeaderGrid}>
 				<a className={styles.postTitle}>{post.title}</a>
-				<p className={styles.postDate}>{post.dateFormatted}</p>
+				<p className={styles.postDate}>{post.date_formatted}</p>
 				<p className={styles.postSubtitle}>{post.sub_title}</p>
 			</div>
 		</Link>

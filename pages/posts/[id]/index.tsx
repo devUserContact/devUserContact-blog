@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import useFetch from "../../../utils/useFetch";
+import gqlFetch from "../../../utils/gqlFetch";
 import PostSansLink from "../../../components/PostSansLink";
 import NavBar from "../../../components/NavBar";
 import Loading from "../../../components/Loading";
@@ -9,7 +9,7 @@ import styles from "../../../styles/Main.module.scss";
 
 const PostPage: NextPage = () => {
 	const router = useRouter();
-	const { posts, dateFormatted } = useFetch();
+	const { posts, dateFormatted } = gqlFetch();
 	const routerId = parseInt(router.query.id! as string);
 	if (dateFormatted) {
 		return (
