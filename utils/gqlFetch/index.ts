@@ -1,18 +1,18 @@
 import { useState, useEffect } from "react";
 import { useQuery } from "@apollo/client";
-import { GetAllBlogPosts } from "../../graphql/queries";
+import { DevGetAllBlogPosts } from "../../graphql/queries";
 
 export default function gqlFetch() {
 	const [posts, setPosts] = useState([]);
 	const [postsFetched, setPostsFetched] = useState(false);
 	const [dateFormatted, setDateFormatted] = useState(false);
-	const { data } = useQuery(GetAllBlogPosts, {
+	const { data } = useQuery(DevGetAllBlogPosts, {
 		variables: {},
 	});
 
 	useEffect(() => {
 		if (data) {
-			setPosts(data.getAllBlogPosts);
+			setPosts(data.DevGetAllBlogPosts);
 			setPostsFetched(true);
 			if (postsFetched) {
 				const postListWithDateFormatted: any = posts.map((post: any, id: number) => {

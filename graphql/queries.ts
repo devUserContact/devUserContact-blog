@@ -1,10 +1,10 @@
 import {gql} from '@apollo/client';
 
-export const GetAllBlogPosts = gql`
+export const DevGetAllBlogPosts = gql`
 	query {
-		getAllBlogPosts {
+		devGetAllBlogPosts {
 			title
-			sub_title
+			subtitle
 			body
 			media
 			tags
