@@ -1,6 +1,6 @@
 import {gql} from '@apollo/client';
 
-export const DevGetAllBlogPosts = gql`
+export const GetAllBlogPosts = gql`
 	query {
 		devGetAllBlogPosts {
 			title
