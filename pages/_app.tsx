@@ -6,8 +6,8 @@ import {
 	ApolloProvider,
 } from "@apollo/client";
 const client = new ApolloClient({
-	//uri: "https://bluehappyface.net/api",
-	uri: "http://localhost:8081/api",
+	uri: "https://bluehappyface.net/api",
+//	uri: "http://localhost:8081/api",
 	cache: new InMemoryCache(),
 });
 
