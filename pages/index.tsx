@@ -3,6 +3,7 @@ import Head from "next/head";
 import NavBar from "../components/NavBar";
 import BlogTitle from "../components/BlogTitle";
 import styles from "../styles/Main.module.scss";
+import CanvasComponent from "../components/CanvasComponent";
 
 const Home: NextPage = () => {
 	return (
@@ -15,7 +16,7 @@ const Home: NextPage = () => {
 			<main>
 				<NavBar />
 				<div className={styles.homeContainer}>
-					<BlogTitle />
+					<CanvasComponent />
 				</div>
 			</main>
 		</div>

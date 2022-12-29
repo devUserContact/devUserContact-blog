@@ -34,7 +34,6 @@ $pigeonBlue: #9cbfbf;
 
 .homeContainer {
 	display: inline-grid;
-	margin-top: 10%;
 	height: 100%;
 	width: 100%;
 	justify-content: center;
@@ -143,6 +142,10 @@ $pigeonBlue: #9cbfbf;
 .errorMessage {
 	display: flex;
 	justify-content: center;
+}
+.containerCanvas {
+	height: 70vh;
+	width: 90vw;
 }
 
 @include sm {
