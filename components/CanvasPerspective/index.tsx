@@ -8,12 +8,12 @@ import styles from '../../styles/Main.module.scss'
 const CanvasPerspective = () => {
   return (
     <>
-      <Canvas camera={{ position: [0, 0, 5] }}>
-        <color attach='background' args={['#ededed']} />
-        <Suspense>
+      <Suspense>
+        <Canvas camera={{ position: [0, 0, 5] }}>
+          <color attach='background' args={['#ededed']} />
           <Text />
-        </Suspense>
-      </Canvas>
+        </Canvas>
+      </Suspense>
     </>
   )
 }
