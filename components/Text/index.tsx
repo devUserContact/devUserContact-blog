@@ -25,11 +25,8 @@ export const Text = (props: any) => {
   return (
     <>
       <pointLight position={[-10, 14, 8]} />
-      <Center center>
         <group ref={mesh}>
-          <Center center>
-            <mesh position={[0, 2, 0]}>
-              <Center right>
+            <mesh position={[-2, 2, 0]}>
                 <Text3D font={myFont} size={0.7}>
                   dev
                   <meshLambertMaterial
@@ -39,10 +36,8 @@ export const Text = (props: any) => {
                   />
                   <Edges color='black' />
                 </Text3D>
-              </Center>
             </mesh>
-            <mesh position={[0, 1, 0]}>
-              <Center right>
+            <mesh position={[-2, 1, 0]}>
                 <Text3D font={myFont} size={0.7}>
                   User
                   <meshLambertMaterial
@@ -52,10 +47,8 @@ export const Text = (props: any) => {
                   />
                   <Edges color='black' />
                 </Text3D>
-              </Center>
             </mesh>
-            <mesh position={[0, 0, 0]}>
-              <Center right>
+            <mesh position={[-2, 0, 0]}>
                 <Text3D font={myFont} size={0.7}>
                   Contact
                   <meshLambertMaterial
@@ -65,11 +58,9 @@ export const Text = (props: any) => {
                   />
                   <Edges color='black' />
                 </Text3D>
-              </Center>
             </mesh>
-          </Center>
         </group>
-        <mesh position={[-0.5, -2.5, 0]}>
+        <mesh position={[-0.5, -1, 0]}>
           <Center right>
             <Text3D font={myFont} size={0.7}>
               _blog
@@ -82,7 +73,6 @@ export const Text = (props: any) => {
             </Text3D>
           </Center>
         </mesh>
-      </Center>
     </>
   )
 }
