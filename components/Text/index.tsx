@@ -1,9 +1,9 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, Suspense } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { Text3D, Edges } from '@react-three/drei'
 
 export const Text = (props: any) => {
-  const [switchRotation, setSwitchRotation] = useState(true)
+  const [switchRotation, setSwitchRotation] = useState(false)
   const mesh: any = useRef()
   useFrame((state) => {
     if (mesh.current.rotation.y > 0.2) {
@@ -24,8 +24,12 @@ export const Text = (props: any) => {
       <pointLight position={[-10, 14, 8]} />
       <group ref={mesh}>
         <mesh position={[-2, 2, 0]}>
-          <Text3D font={'../../static/UncutSans_Regular.json'} size={0.7} dispose={null}>
-            dev
+          <Text3D
+            font={'../../static/UncutSans_Regular.json'}
+            size={0.7}
+            dispose={null}
+          >
+            {`dev`}
             <meshLambertMaterial
               color={0x00ffbb}
               opacity={1.0}
@@ -35,8 +39,12 @@ export const Text = (props: any) => {
           </Text3D>
         </mesh>
         <mesh position={[-2, 1, 0]}>
-          <Text3D font={'../../static/UncutSans_Regular.json'} size={0.7} dispose={null}>
-            User
+          <Text3D
+            font={'../../static/UncutSans_Regular.json'}
+            size={0.7}
+            dispose={null}
+          >
+            {`User`}
             <meshLambertMaterial
               color={0x00ffee}
               opacity={1.0}
@@ -46,8 +54,12 @@ export const Text = (props: any) => {
           </Text3D>
         </mesh>
         <mesh position={[-2, 0, 0]}>
-          <Text3D font={'../../static/UncutSans_Regular.json'} size={0.7} dispose={null}>
-            Contact
+          <Text3D
+            font={'../../static/UncutSans_Regular.json'}
+            size={0.7}
+            dispose={null}
+          >
+            {`Contact`}
             <meshLambertMaterial
               color={0x00eeee}
               opacity={1.0}
@@ -58,8 +70,12 @@ export const Text = (props: any) => {
         </mesh>
       </group>
       <mesh position={[-0.5, -1, 0]}>
-        <Text3D font={'../../static/UncutSans_Regular.json'} size={0.7} dispose={null}>
-          _blog
+        <Text3D
+          font={'../../static/UncutSans_Regular.json'}
+          size={0.7}
+          dispose={null}
+        >
+          {`_blog`}
           <meshLambertMaterial
             color={0xffaacc}
             opacity={1.0}
