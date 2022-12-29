@@ -1,8 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { useFrame } from '@react-three/fiber'
-import { Text3D, Center, Edges } from '@react-three/drei'
-
-import myFont from '../../static/UncutSans_Regular.json'
+import { Text3D, Edges } from '@react-three/drei'
 
 export const Text = (props: any) => {
   const [hovered, setHover] = useState(false)
@@ -25,54 +23,52 @@ export const Text = (props: any) => {
   return (
     <>
       <pointLight position={[-10, 14, 8]} />
-        <group ref={mesh}>
-            <mesh position={[-2, 2, 0]}>
-                <Text3D font={myFont} size={0.7}>
-                  dev
-                  <meshLambertMaterial
-                    color={0x00ffbb}
-                    opacity={1.0}
-                    wireframe={hovered ? true : false}
-                  />
-                  <Edges color='black' />
-                </Text3D>
-            </mesh>
-            <mesh position={[-2, 1, 0]}>
-                <Text3D font={myFont} size={0.7}>
-                  User
-                  <meshLambertMaterial
-                    color={0x00ffee}
-                    opacity={1.0}
-                    wireframe={false}
-                  />
-                  <Edges color='black' />
-                </Text3D>
-            </mesh>
-            <mesh position={[-2, 0, 0]}>
-                <Text3D font={myFont} size={0.7}>
-                  Contact
-                  <meshLambertMaterial
-                    color={0x00eeee}
-                    opacity={1.0}
-                    wireframe={false}
-                  />
-                  <Edges color='black' />
-                </Text3D>
-            </mesh>
-        </group>
-        <mesh position={[-0.5, -1, 0]}>
-          <Center right>
-            <Text3D font={myFont} size={0.7}>
-              _blog
-              <meshLambertMaterial
-                color={0xffaacc}
-                opacity={1.0}
-                wireframe={false}
-              />
-              <Edges color='black' />
-            </Text3D>
-          </Center>
+      <group ref={mesh}>
+        <mesh position={[-2, 2, 0]}>
+          <Text3D font={'../../static/UncutSans_Regular.json'} size={0.7}>
+            dev
+            <meshLambertMaterial
+              color={0x00ffbb}
+              opacity={1.0}
+              wireframe={hovered ? true : false}
+            />
+            <Edges color='black' />
+          </Text3D>
         </mesh>
+        <mesh position={[-2, 1, 0]}>
+          <Text3D font={'../../static/UncutSans_Regular.json'} size={0.7}>
+            User
+            <meshLambertMaterial
+              color={0x00ffee}
+              opacity={1.0}
+              wireframe={false}
+            />
+            <Edges color='black' />
+          </Text3D>
+        </mesh>
+        <mesh position={[-2, 0, 0]}>
+          <Text3D font={'../../static/UncutSans_Regular.json'} size={0.7}>
+            Contact
+            <meshLambertMaterial
+              color={0x00eeee}
+              opacity={1.0}
+              wireframe={false}
+            />
+            <Edges color='black' />
+          </Text3D>
+        </mesh>
+      </group>
+      <mesh position={[-0.5, -1, 0]}>
+        <Text3D font={'../../static/UncutSans_Regular.json'} size={0.7}>
+          _blog
+          <meshLambertMaterial
+            color={0xffaacc}
+            opacity={1.0}
+            wireframe={false}
+          />
+          <Edges color='black' />
+        </Text3D>
+      </mesh>
     </>
   )
 }
