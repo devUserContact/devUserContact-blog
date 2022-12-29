@@ -1,4 +1,5 @@
-import CanvasPerspective from '../CanvasPerspective'
+import { lazy } from 'react'
+const CanvasPerspective = lazy(() => import('../CanvasPerspective'))
 
 import styles from '../../styles/Main.module.scss'
 
