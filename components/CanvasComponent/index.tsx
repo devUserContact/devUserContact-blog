@@ -1,4 +1,4 @@
-import { lazy } from 'react'
+import { lazy, Suspense } from 'react'
 const CanvasPerspective = lazy(() => import('../CanvasPerspective'))
 
 import styles from '../../styles/Main.module.scss'
@@ -6,9 +6,11 @@ import styles from '../../styles/Main.module.scss'
 const CanvasComponent = () => {
   return (
     <>
-      <div className={styles.containerCanvas}>
-        <CanvasPerspective />
-      </div>
+      <Suspense>
+        <div className={styles.containerCanvas}>
+          <CanvasPerspective />
+        </div>
+      </Suspense>
     </>
   )
 }
