@@ -25,60 +25,64 @@ export const Text = (props: any) => {
   return (
     <>
       <pointLight position={[-10, 14, 8]} />
-          <group ref={mesh}>
-              <mesh position={[0, 2, 0]}>
-                <Center right>
-                  <Text3D font={myFont} size={0.7}>
-                    dev
-                    <meshLambertMaterial
-                      color={0x00ffbb}
-                      opacity={1.0}
-                      wireframe={hovered ? true : false}
-                    />
-                    <Edges color='black' />
-                  </Text3D>
-                </Center>
-              </mesh>
-              <mesh position={[0, 1, 0]}>
-                <Center right>
-                  <Text3D font={myFont} size={0.7}>
-                    User
-                    <meshLambertMaterial
-                      color={0x00ffee}
-                      opacity={1.0}
-                      wireframe={false}
-                    />
-                    <Edges color='black' />
-                  </Text3D>
-                </Center>
-              </mesh>
-              <mesh position={[0, 0, 0]}>
-                <Center right>
-                  <Text3D font={myFont} size={0.7}>
-                    Contact
-                    <meshLambertMaterial
-                      color={0x00eeee}
-                      opacity={1.0}
-                      wireframe={false}
-                    />
-                    <Edges color='black' />
-                  </Text3D>
-                </Center>
-              </mesh>
-          </group>
-          <mesh position={[-0.5, -2.5, 0]}>
-            <Center right>
-              <Text3D font={myFont} size={0.7}>
-                _blog
-                <meshLambertMaterial
-                  color={0xffaacc}
-                  opacity={1.0}
-                  wireframe={false}
-                />
-                <Edges color='black' />
-              </Text3D>
-            </Center>
-          </mesh>
+      <Center center>
+        <group ref={mesh}>
+          <Center center>
+            <mesh position={[0, 2, 0]}>
+              <Center right>
+                <Text3D font={myFont} size={0.7}>
+                  dev
+                  <meshLambertMaterial
+                    color={0x00ffbb}
+                    opacity={1.0}
+                    wireframe={hovered ? true : false}
+                  />
+                  <Edges color='black' />
+                </Text3D>
+              </Center>
+            </mesh>
+            <mesh position={[0, 1, 0]}>
+              <Center right>
+                <Text3D font={myFont} size={0.7}>
+                  User
+                  <meshLambertMaterial
+                    color={0x00ffee}
+                    opacity={1.0}
+                    wireframe={false}
+                  />
+                  <Edges color='black' />
+                </Text3D>
+              </Center>
+            </mesh>
+            <mesh position={[0, 0, 0]}>
+              <Center right>
+                <Text3D font={myFont} size={0.7}>
+                  Contact
+                  <meshLambertMaterial
+                    color={0x00eeee}
+                    opacity={1.0}
+                    wireframe={false}
+                  />
+                  <Edges color='black' />
+                </Text3D>
+              </Center>
+            </mesh>
+          </Center>
+        </group>
+        <mesh position={[-0.5, -2.5, 0]}>
+          <Center right>
+            <Text3D font={myFont} size={0.7}>
+              _blog
+              <meshLambertMaterial
+                color={0xffaacc}
+                opacity={1.0}
+                wireframe={false}
+              />
+              <Edges color='black' />
+            </Text3D>
+          </Center>
+        </mesh>
+      </Center>
     </>
   )
 }
