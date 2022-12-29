@@ -25,7 +25,6 @@ export const Text = (props: any) => {
   return (
     <>
       <pointLight position={[-10, 14, 8]} />
-      <Center center>
         <group ref={mesh}>
           <Center center>
             <mesh
@@ -84,7 +83,6 @@ export const Text = (props: any) => {
             </Text3D>
           </Center>
         </mesh>
-      </Center>
     </>
   )
 }
