@@ -6,24 +6,30 @@ import myFont from '../../static/UncutSans_Regular.json'
 
 export const Text = (props: any) => {
   const [hovered, setHover] = useState(false)
+  const [switchRotation, setSwitchRotation] = useState(true)
   const mesh: any = useRef()
-
   useFrame((state) => {
-    const { clock } = state
-    //    mesh.current.material.uniforms.u_time.value = clock.getElapsedTime()
+    if (mesh.current.rotation.y > 0.2) {
+      setSwitchRotation(false)
+    }
+    if (mesh.current.rotation.y < -0.2) {
+      setSwitchRotation(true)
+    }
+    if (switchRotation === true) {
+      mesh.current.rotation.y -= (-Math.PI / 0.95) * 0.0005
+    }
+    if (switchRotation === false) {
+      mesh.current.rotation.y += (-Math.PI / 0.95) * 0.0005
+    }
   })
   return (
     <>
       <pointLight position={[-10, 14, 8]} />
       <Center center>
-        <group
-        rotation={[0, -Math.PI / 0.245, 0]}
-        >
+        <group ref={mesh}>
           <Center center>
             <mesh
               position={[0, 2, 0]}
-              onPointerOver={(event) => setHover(true)}
-              onPointerOut={(event) => setHover(false)}
             >
               <Center right>
                 <Text3D font={myFont} size={0.7}>
