@@ -3,7 +3,6 @@ import { useFrame } from '@react-three/fiber'
 import { Text3D, Edges } from '@react-three/drei'
 
 export const Text = (props: any) => {
-  const [hovered, setHover] = useState(false)
   const [switchRotation, setSwitchRotation] = useState(true)
   const mesh: any = useRef()
   useFrame((state) => {
@@ -30,7 +29,7 @@ export const Text = (props: any) => {
             <meshLambertMaterial
               color={0x00ffbb}
               opacity={1.0}
-              wireframe={hovered ? true : false}
+              wireframe={false}
             />
             <Edges color='black' />
           </Text3D>
