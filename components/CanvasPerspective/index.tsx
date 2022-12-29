@@ -1,24 +1,20 @@
 import React from 'react'
+import { lazy, Suspense } from 'react'
+const Text = lazy(() => import('../Text'))
 import { Canvas } from '@react-three/fiber'
-
-//import Geometry from "../Geometry";
-//import Particles from "../Particles";
-//import Gltf from '../Gltf'
-import Text from '../Text'
 
 import styles from '../../styles/Main.module.scss'
 
 const CanvasPerspective = () => {
   return (
-    <Canvas camera={{ position: [0, 0, 5] }}>
-      <color attach='background' args={['#ededed']} />
-      <Text />
-{/*
-			<Particles />
-			<Geometry />
-      <Gltf />
-*/}
-    </Canvas>
+    <>
+      <Canvas camera={{ position: [0, 0, 5] }}>
+        <color attach='background' args={['#ededed']} />
+        <Suspense>
+          <Text />
+        </Suspense>
+      </Canvas>
+    </>
   )
 }
 
