@@ -6,17 +6,17 @@ export default function NavBar() {
 		<>
 			<div className={styles.navBarContainer}>
 				<p className={styles.navBarText}>
-					<Link href="/">
+					<Link legacyBehavior href="/">
 						<a>/home </a>
 					</Link>
 				</p>
 				<p className={styles.navBarText}>
-					<Link href="/posts">
+					<Link legacyBehavior href="/posts">
 						<a>/blog </a>
 					</Link>
 				</p>
 				<p className={styles.navBarText}>
-					<Link href="/about">
+					<Link  legacyBehavior href="/about">
 						<a>/about </a>
 					</Link>
 				</p>
