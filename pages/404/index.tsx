@@ -8,7 +8,7 @@ const Message404 = () => {
 	return (
 		<>
 			<div className={styles.errorMessage}>
-				<Image src={message} />
+				<Image src={message} alt={"404"} />
 			</div>
 			<div className={styles.errorMessage}>
 				<p className={styles.blogSubTitle}>page not found</p>
