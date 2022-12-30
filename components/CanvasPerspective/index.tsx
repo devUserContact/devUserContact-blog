@@ -5,6 +5,7 @@ import { Canvas } from '@react-three/fiber'
 
 import styles from '../../styles/Main.module.scss'
 
+
 const CanvasPerspective = () => {
   return (
     <>
