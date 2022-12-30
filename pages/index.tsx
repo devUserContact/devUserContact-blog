@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import NavBar from "../components/NavBar";
-//import CanvasComponent from "../components/CanvasComponent";
-import BlogTitle from "../components/BlogTitle";
+import CanvasComponent from "../components/CanvasComponent";
+//import BlogTitle from "../components/BlogTitle";
 import styles from "../styles/Main.module.scss";
 
 const Home: NextPage = () => {
@@ -16,7 +16,7 @@ const Home: NextPage = () => {
 			<main>
 				<NavBar />
 				<div className={styles.homeContainer}>
-					<BlogTitle />
+					<CanvasComponent />
 				</div>
 			</main>
 		</div>

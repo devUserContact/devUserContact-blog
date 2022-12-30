@@ -25,7 +25,7 @@ export const Text = (props: any) => {
       <group ref={mesh}>
         <mesh position={[-2, 2, 0]}>
           <Text3D
-            font={'../../static/UncutSans_Regular.json'}
+            font={'../../static/UncutSans_Regular.typeface.json'}
             size={0.7}
             dispose={null}
           >
@@ -40,7 +40,7 @@ export const Text = (props: any) => {
         </mesh>
         <mesh position={[-2, 1, 0]}>
           <Text3D
-            font={'../../static/UncutSans_Regular.json'}
+            font={'../../static/UncutSans_Regular.typeface.json'}
             size={0.7}
             dispose={null}
           >
@@ -55,7 +55,7 @@ export const Text = (props: any) => {
         </mesh>
         <mesh position={[-2, 0, 0]}>
           <Text3D
-            font={'../../static/UncutSans_Regular.json'}
+            font={'../../static/UncutSans_Regular.typeface.json'}
             size={0.7}
             dispose={null}
           >
@@ -71,7 +71,7 @@ export const Text = (props: any) => {
       </group>
       <mesh position={[-0.5, -1, 0]}>
         <Text3D
-          font={'../../static/UncutSans_Regular.json'}
+          font={'../../static/UncutSans_Regular.typeface.json'}
           size={0.7}
           dispose={null}
         >
