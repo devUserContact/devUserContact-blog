@@ -1,7 +1,7 @@
 import React, { useRef, useState, Suspense } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { Text3D, Edges } from '@react-three/drei'
-import usFont from '../../public/UncutSans_Regular.typeface.json'
+//import usFont from '../../public/UncutSans_Regular.typeface.json'
 
 export const Text = (props: any) => {
   const [switchRotation, setSwitchRotation] = useState(false)
@@ -26,7 +26,7 @@ export const Text = (props: any) => {
       <group ref={mesh}>
         <mesh position={[-2, 2, 0]}>
           <Text3D
-            font={usFont}
+            font='/UncutSans_Regular.typeface.json'
             size={0.7}
             dispose={null}
           >
@@ -41,7 +41,7 @@ export const Text = (props: any) => {
         </mesh>
         <mesh position={[-2, 1, 0]}>
           <Text3D
-            font={usFont}
+            font='/UncutSans_Regular.typeface.json'
             size={0.7}
             dispose={null}
           >
@@ -56,7 +56,7 @@ export const Text = (props: any) => {
         </mesh>
         <mesh position={[-2, 0, 0]}>
           <Text3D
-            font={usFont}
+            font='/UncutSans_Regular.typeface.json'
             size={0.7}
             dispose={null}
           >
@@ -72,7 +72,7 @@ export const Text = (props: any) => {
       </group>
       <mesh position={[-0.5, -1, 0]}>
         <Text3D
-          font={usFont}
+          font='/UncutSans_Regular.typeface.json'
           size={0.7}
           dispose={null}
         >
