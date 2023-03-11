@@ -5,9 +5,9 @@ export default function Loading() {
   const [toggle, setToggle] = useState<boolean>(true);
   let loadingText = "loading. . ."
     if (toggle === true) {
-      loadingText = "loading. . ." 
+      loadingText = " Loading. . ." 
     } else {
-      loadingText = "loading . . ."
+      loadingText = "Loading . . ."
     }
   function toggleBoolean() {
     setTimeout(() => {
