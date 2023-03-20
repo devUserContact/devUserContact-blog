@@ -2,7 +2,7 @@ export const Resume: any = `### _Hello_,
 ### My name is Maxwell & I am a software developer with a passion for full-stack web development
 ### 
 ___
-certificates
+certificates:
 - [Google Data Analytics Prefessional Certificate][googleDataCert] 
 ___
 projects: 
