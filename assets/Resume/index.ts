@@ -4,6 +4,7 @@ export const Resume: any = `### _Hello_,
 ___
 certificates:
 - [Google Data Analytics Prefessional Certificate][googleDataCert] 
+- [Nvidia Fundamentals of Deep Learning][nvidiaDeepLearingCert] 
 ___
 projects: 
 - [Emoji Fortune][1] - Next.js app that reveals your emoji fortune 🔮
@@ -22,4 +23,5 @@ contact:
 [5]:https://www.linkedin.com/in/maxwell-wine-a23872221/?original_referer=https%3A%2F%2Fgithub.com%2FdevUserContact
 [email]:mailto:developer.user.contact@protonamil.com "developer.user.contact@protonmail" 
 [googleDataCert]:https://coursera.org/share/bb226f03aa86cc69c8f4bae652266074
+[nvidiaDeepLearingCert]:https://courses.nvidia.com/certificates/2eb181e919b14add9c82353a6e6b3066/
 `;
