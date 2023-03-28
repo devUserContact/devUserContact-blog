@@ -3,7 +3,7 @@ export const Resume: any = `### _Hello_,
 ### 
 ___
 certificates:
-- [Google Data Analytics Prefessional Certificate][googleDataCert] 
+- [Google Data Analytics Professional Certificate][googleDataCert] 
 - [Nvidia Fundamentals of Deep Learning][nvidiaDeepLearingCert] 
 ___
 projects: 
