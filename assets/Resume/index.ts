@@ -3,8 +3,9 @@ export const Resume: any = `### _Hello_,
 ### 
 ___
 certificates:
-- [Google Data Analytics][googleDataCert] 
-- [Nvidia Fundamentals of Deep Learning][nvidiaDeepLearingCert] 
+- [Tensorflow Developer - '23][tensorflowDeveloperCert] 
+- [Nvidia Fundamentals of Deep Learning - '23][nvidiaDeepLearingCert] 
+- [Google Data Analytics - '23][googleDataCert] 
 ___
 projects: 
 - [Emoji Fortune][1] - Next.js app that reveals your emoji fortune 🔮
@@ -27,4 +28,5 @@ contact:
 [email]:mailto:developer.user.contact@protonamil.com "developer.user.contact@protonmail" 
 [googleDataCert]:https://coursera.org/share/bb226f03aa86cc69c8f4bae652266074
 [nvidiaDeepLearingCert]:https://courses.nvidia.com/certificates/2eb181e919b14add9c82353a6e6b3066/
+[tensorflowDeveloperCert]:https://coursera.org/share/fd68740ab6367186d66ff0533a339411
 `;
