@@ -8,6 +8,7 @@ certificates:
 - [Google Data Analytics - '23][googleDataCert] 
 ___
 projects: 
+- [spdReader][appleAppStoreLink] - Read faster than ever before on iOS 📱
 - [Emoji Fortune][1] - Next.js app that reveals your emoji fortune 🔮
 - [Language Search Tool][2] - Next.js app for searching multiple language sites 📚
 - Tabs to Markdown - A Web Extension available for:
@@ -29,4 +30,5 @@ contact:
 [googleDataCert]:https://coursera.org/share/bb226f03aa86cc69c8f4bae652266074
 [nvidiaDeepLearingCert]:https://courses.nvidia.com/certificates/2eb181e919b14add9c82353a6e6b3066/
 [tensorFlowDeveloperCert]:https://coursera.org/share/fd68740ab6367186d66ff0533a339411
+[appleAppStoreLink]:https://apps.apple.com/us/app/spdreader/id6745416455
 `;
