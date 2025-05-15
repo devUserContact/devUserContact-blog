@@ -9,8 +9,6 @@ certificates:
 ___
 projects: 
 - [spdReader][appleAppStoreLink] - Read faster than ever before on iOS 📱
-- [Emoji Fortune][1] - Next.js app that reveals your emoji fortune 🔮
-- [Language Search Tool][2] - Next.js app for searching multiple language sites 📚
 - Tabs to Markdown - A Web Extension available for:
   - [Chrome][ttmChrome] 🌎
   - [Firefox][ttmFirefox] 🦊 
@@ -20,8 +18,6 @@ contact:
 - [GitHub][4]
 - [LinkedIn][5]
 
-[1]:https://emojifortune.com
-[2]:https://language-search-tool.netlify.app/
 [ttmFirefox]:https://addons.mozilla.org/en-US/firefox/addon/tabs-to-markdown/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search
 [ttmChrome]:https://chrome.google.com/webstore/detail/tabs-to-markdown/hdejpgldbapinkbipleilelmhgcgffno
 [4]:https://github.com/devUserContact
