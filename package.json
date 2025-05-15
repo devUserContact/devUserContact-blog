@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@solidjs/router": "^0.13.5",
+    "rehype-external-links": "^3.0.0",
     "solid-js": "^1.8.11",
     "solidjs-markdown": "^0.2.0"
   }
