@@ -5,9 +5,11 @@ export default function App(props) {
         <div class='ml-5 mr-5 '>
           <a href='/'>🐦</a>
         </div>
+        {/* 
         <div class='ml-5 mr-5'>
           <a href='/posts'>/posts</a>
         </div>
+        */}
         <div class='ml-5 mr-5'>
           <a href='/about'>/about</a>
         </div>
